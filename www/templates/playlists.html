@@ -1,0 +1,42 @@
+<!--<ion-view title="Inside View">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+        {{playlist.title}}
+      </ion-item>
+    </ion-list>
+      
+ <div class="card">
+  <div class="item item-text-wrap">
+    Some introduction about the InsideView App goes here..
+  </div>
+</div>   
+  </ion-content>
+</ion-view>-->
+<ion-view title="{{navTitle}}"  left-buttons="leftButtons" ng-controller="PlaylistCtrl">
+    <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+    <ion-tabs class="tabs-icon-top tabs-background-positive tabs-striped" tabs-type="tabs-icon-only">
+        <ion-tab title="Tab 1" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline">
+            <ion-content has-header="true" padding="true">
+                <h2>Tab 1 Content</h2>
+            </ion-content>
+        </ion-tab>
+
+        <ion-tab title="Tab 2" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline" ui-sref="tabs.home">
+           <!--<ion-content has-header="true" padding="true">-->
+                <ion-nav-view></ion-nav-view>
+           <!-- </ion-content> -->
+        </ion-tab>
+
+        <ion-tab title="Tab 3" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline">
+            <ion-content has-header="true" padding="true">
+                <h2>Tab 3 Content</h2>
+            </ion-content>
+        </ion-tab>
+    </ion-tabs>
+</ion-view>    

@@ -1,0 +1,67 @@
+<ion-pane ng-controller="DashboardCtrl">     
+          <ion-header-bar  align-title="left" class="agsBar agsHeaderBorder">
+              <div class="buttons">
+                <div class="ion-arrow-left-a" menu-toggle="left" ></div>
+              </div>
+              <h1 class="title">Dashboard</h1>
+              <div class="buttons">
+                <!--<button class="button">Right Button</button>-->
+                <button class="button button-icon ion-more" ng-controller="PopoverCtrl" ng-click="openPopover($event);"></button>  
+              </div>
+          </ion-header-bar>
+          <ion-content>
+            <!--<div class="card">-->
+              <div class="item item-text-wrap">
+                  <center><highchart id="chart1" config="dashBoardChart" class="span9" ></highchart></center>
+               </div> 
+            <!--</div> --> 
+            <div>
+                 <!--<ion-scroll ng-controller="SettingsCtrl" ng-init="getSites();">
+                      <div ng-repeat="item in sitesList"
+                          ng-model = "project"
+                          ng-value = "item.tile">
+                         <div class="card" style="padding:10px;">{{item.title}}</div>
+                      </div> 
+                  </ion-scroll> --> 
+                 <div id="search-bar">
+                      <label class="item-input-wrapper" id="search-input">
+                        <!--<i class="icon ion-android-search placeholder-icon"></i>-->
+                        <input type="text" placeholder="Search" ng-model="searchText">
+                      </label>
+
+               </div>                
+                <ion-scroll>
+                      <div ng-repeat="column in data.columns | filter:searchText"
+                          ng-model = "project"
+                          ng-value = "column.name">
+                         <div class="card colorBand" ng-class="{cardPopup: column.name == selected}" ng-click="selectedProjectCard(column.name);">{{column.name}}</div>
+                      </div> 
+                  </ion-scroll> 
+
+                    <!-- <div class="item col-header item-icon-right">
+                        <div class="flex-container wrap">
+                            <div ng-repeat="column in data.columns" ng-click="sortBy(column.id)">
+                                <div class="column" ng-class="{ 'underlined' : data.sortOn === column.id }">{{column.name}}&nbsp;</div>
+                                <div class="column-sort">
+                                    <i ng-class="{'ion-chevron-up' : data.sortReverse === false, 'ion-chevron-down' : data.sortReverse === true} " ng-if="data.sortOn === column.id"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  <div class="item low-pad-item item-icon-right" ng-repeat="item in data.items | orderBy:sortData:data.sortReverse ">
+                        <div class="flex-container wrap">
+                            <div ng-repeat="column in data.columns">
+                                <div class="column">{{item[column.id]}}&nbsp;</div>
+                            </div>
+                        </div>
+                        <i class="icon ion-chevron-right icon-accessory"></i>
+                    </div> -->
+
+
+
+
+              </div>
+
+          </ion-content>
+</ion-pane>
+ 

@@ -1,0 +1,8 @@
+{
+    "jscodehints.detectedExclusions": [
+        "D:/VVanjarana/MyProgs/MobileApp/rapid/platforms/android/assets/www/lib/ionic/js/angular/angular-sanitize.js",
+        "D:/VVanjarana/MyProgs/MobileApp/rapid/platforms/android/assets/www/lib/ionic/js/angular/angular-sanitize.min.js",
+        "D:/VVanjarana/MyProgs/MobileApp/rapid/platforms/android/assets/www/lib/ionic/js/angular/angular.js",
+        "D:/VVanjarana/MyProgs/MobileApp/rapid/www/js/controllers.js"
+    ]
+}

@@ -1,0 +1,81 @@
+<ion-pane>
+      <ion-header-bar class="agsBar agsHeaderBorder">
+        <div class="buttons">
+                <button class="button" menu-toggle="left" >Left Button</button>
+              </div>
+              <h1 class="title">Engineering Metrics</h1>
+              
+      </ion-header-bar>
+      <ion-content header-shrink scroll-event-interval="5">
+        <div style="height: 64px;"></div>
+
+          <div class="list card">
+
+          <div class="item item-avatar">
+            <img src="img/idexxlogo.png" width="50%" height="50%">
+            <h2>IDEXX Digital</h2>
+            <p>Code Violation Chart</p>
+          </div>
+
+          <div class="item item-body">
+            <highchart id="chart1" config="chartConfig" class="span9" ></highchart>
+            <p>
+              This is code violations chart for the IDEXX Digital project..
+            </p>
+          </div>
+
+          <div class="item tabs tabs-secondary tabs-icon-left">
+            <a class="tab-item" href="#" ng-controller="EmailController" ng-click="sendFeedback();">
+              <i class="icon ion-email"></i>
+              e-mail
+            </a>
+            <a class="tab-item" href="#">
+              <i class="icon ion-chatbox"></i>
+              Comment
+            </a>
+            <a class="tab-item" href="#">
+              <i class="icon ion-share"></i>
+              Share
+            </a>
+          </div>
+
+        </div>
+          
+        <div class="list card">
+
+          <div class="item item-avatar">
+            <img src="img/idexxlogo.png" width="50%" height="50%">
+            <h2>IDEXX Digital</h2>
+            <p>Technical Debt</p>
+          </div>
+
+          <div class="item item-body">
+            <img class="full-image" src="img/technicaldebt.png">
+            <p>
+              This is technical debt chart for the IDEXX Digital project..
+            </p>
+          </div>
+
+          <div class="item tabs tabs-secondary tabs-icon-left">
+            <a class="tab-item" href="#">
+              <i class="icon ion-email"></i>
+              e-mail
+            </a>
+            <a class="tab-item" href="#">
+              <i class="icon ion-chatbox"></i>
+              Comment
+            </a>
+            <a class="tab-item" href="#">
+              <i class="icon ion-share"></i>
+              Share
+            </a>
+          </div>
+
+        </div>  
+          
+          
+
+      </ion-content>
+    </ion-pane>
+  
+

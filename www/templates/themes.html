@@ -1,0 +1,51 @@
+<!--<div class="modal"  ng-controller="themeCtrl">-->
+<ion-view title="Search" ng-controller="themeCtrl">    
+    
+    <ion-header-bar align-title="left" class="bar {{choice}}">
+        <div class="button icon ion-gear-a {{choice}}"></div>
+         <div class="title"><h1 class="title" align-title="center">Themes</h1></div>                     
+      </ion-header-bar>
+    
+    <ion-content>   
+        
+        <div class="card {{choice}}">
+          <div class="item item-divider">
+            Current
+          </div>
+          <div class="item item-text-wrap">
+           <button ng-hide="defaultTheme" class="button button-small {{defaultColor}}"></button></div>
+          </div>          
+     <div class="card">
+         <div class="item item-divider">
+            Available
+          </div>
+          <div class="item item-text-wrap">
+                              <button ng-hide="selectedRed" class="button button-small button-assertive" ng-click="themeChanger('red')">
+
+                </button>
+                <button ng-hide="selectedGreen" class="button button-small button-balanced" ng-click="themeChanger('green')">
+
+                </button>
+                <button ng-hide="selectedOrange" class="button button-small button-energized" ng-click="themeChanger('orange')">
+
+                </button>
+                <button ng-hide="selectedPurple" class="button button-small button-royal" ng-click="themeChanger('purple')">
+
+                </button>
+
+                <button ng-hide="selectedBlue" class="button button-small button-positive" ng-click="themeChanger('blue')">
+
+                </button>
+
+          </div>
+         
+        </div> 
+        
+        <button class="button button-stable" ng-click="saveChange()">
+            Save changes
+         </button>
+         <button class="button button-stable" ng-click="cancelChange()">
+            Cancel
+         </button>
+    </ion-content>
+</ion-view>

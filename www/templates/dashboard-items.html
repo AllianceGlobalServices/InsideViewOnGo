@@ -1,0 +1,15 @@
+<ion-popover-view>
+<!--    <ion-header-bar class="agsBar">
+        
+    </ion-header-bar>-->
+    <ion-content>
+      <div class="card agsBar">          
+        <ion-radio class="checkbox-energized" ng-repeat="item in metricTypes"
+                      ng-model="project" 
+                      ng-value="item.title">
+          {{ item.title }}
+        </ion-radio>
+                
+      </div>
+    </ion-content>
+  </ion-popover-view>

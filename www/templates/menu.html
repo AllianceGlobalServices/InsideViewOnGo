@@ -1,0 +1,55 @@
+<ion-side-menus>
+
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="agsBar agsHeaderBorder">
+       
+  <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>  
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+      
+  </ion-pane>
+
+  <ion-side-menu side="left">
+    <header class="bar">
+      
+      <ion-header-bar align-title="left" class="agsBar agsHeaderBorder">
+                <h1 class="title" align-title="center" ><div ng-controller="UserInfoCtrl" ng-init="getUserInfo();" class="ion-android-social-user">&nbsp;{{displayUserName}} </div></h1>
+              <!--<button class="button button-icon ion-more" ng-controller="PopoverCtrl" ng-click="openPopover($event);"></button>--></div>      
+       </ion-header-bar>
+      
+    </header>
+      
+    <ion-content class="dark">
+        <ui class="list">
+            <!--<a href="#/app/login" menu-toggle="left" class="item" ng-click="login()">Login</a>-->
+            <a href="#/app/dashboard" menu-toggle="left" class="item"> <div class="ion-clipboard" style="padding-right:10px;float:left;"> </div>Dashboard</a>
+            <a href="#/app/projMetrics" menu-toggle="left" class="item"><div class="ion-stats-bars" style="padding-right:10px;float:left;"></div>Project Metrics</a>
+            <a href="#/app/engMetrics" menu-toggle="left" class="item"><div class="ion-arrow-graph-up-right" style="padding-right:10px;float:left;"></div>Engineering Metrics</a>
+            <a href="#/app/settings" menu-toggle="left" class="item"><div class="ion-settings" style="padding-right:10px;float:left;"></div>Settings</a>
+            <a href="#/app/logout" menu-toggle="left" class="item" ng-click="logout()"><div class="ion-log-out" style="padding-right:10px;float:left;"></div>Sign out</a>
+        </ui>
+      <!--<ion-list>
+        <ion-item class="dark" nav-clear menu-close ng-click="login()">
+          Login
+        </ion-item>
+        <ion-item  class="dark" nav-clear menu-close ng-href="#/app/projMetrics">
+          Project Metrics
+        </ion-item>
+        <ion-item  class="dark" nav-clear menu-close ng-href="#/app/engMetrics">
+          Engineering Metrics
+        </ion-item>
+        <ion-item  class="dark" nav-clear menu-close href="#/app/settings">
+          Settings
+        </ion-item>  
+        <ion-item  class="dark" nav-clear menu-close href="#/app/playlists">
+          Logout
+        </ion-item>
+      </ion-list>-->
+    </ion-content>
+    
+ <div class="bar bar-footer agsBar">
+  <!--<div><img src="img/ags.png"></div>-->
+</div>
+    
+  </ion-side-menu>
+</ion-side-menus>

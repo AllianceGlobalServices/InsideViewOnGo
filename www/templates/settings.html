@@ -1,0 +1,39 @@
+<ion-pane>
+    
+        <ion-header-bar  align-title="left" class="agsBar agsHeaderBorder">
+              <div class="buttons">
+                <button class="button" menu-toggle="left" >Left Button</button>
+              </div>
+              <h1 class="title">AGS Projects</h1>
+              
+          </ion-header-bar>
+    
+    <!--<ion-content ng-init="getProjectSelected();">-->
+    <ion-content ng-init="getSites();">
+        <div id="search-bar">
+                <div class="item item-input-inset">
+                  <label class="item-input-wrapper" id="search-input">
+                    <i class="icon ion-android-search placeholder-icon"></i>
+                    <input type="text" placeholder="Search" ng-model="searchText">
+                  </label>
+                </div>
+       </div>
+       <div class="list card">          
+        <!--ng-change="projectChanged(item.title);"-->
+        <ion-radio class="checkbox-energized colorBand" ng-change="projectChanged(item.title);" ng-repeat="item in sitesList | filter:searchText"
+                      ng-model="project" 
+                      ng-value="item.title">
+          {{ item.title }}
+        </ion-radio>
+                
+      </div>
+    </ion-content>
+    
+</ion-pane>
+
+
+
+       
+        
+    
+    
