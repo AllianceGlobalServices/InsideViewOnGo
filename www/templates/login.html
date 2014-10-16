@@ -1,18 +1,22 @@
 <ion-view  ng-controller="LoginCtrl">
+    
   <ion-content class="loginScreen">
-      <div style="margin:5% auto;"><center><img src="img/logo.png" width="50%"></img></center></div>
-      <div style="padding-left: 10px;color: darkolivegreen;">{{message}}</div> 
-      <div class="card">
-          <label class="item item-input">
-            <input type="text" ng-model="loginData.username" placeholder="Username">
-          </label>
-          <label class="item item-input">
-            <input type="password" ng-model="loginData.password" placeholder="Password">
-          </label>      
-      </div>
-      <label class="loginButton">
-            <button class="button button-block loginButtonColor" ng-click="Login('app.dashboard')">Sign In</button>
-      </label>
       
+      <div style="margin:5% auto;"><center><img src="img/logo.png" width="50%"></img></center></div>
+      <div style="padding-left: 10px;color: blue;">{{message}}</div>
+        <div style="background-color:rgb(248, 167, 91); border-radius: 15px;" class="card">
+          <div class="card">
+              <label class="item item-input">
+                <input type="text" ng-model="loginData.username" placeholder="Username">
+              </label>
+              <label class="item item-input">
+                <input type="password" ng-model="loginData.password" placeholder="Password">
+              </label>      
+          </div>
+          <label class="loginButton">
+                <button class="button button-block loginButtonColor" ng-click="Login('app.dashboard')">Sign In</button>
+          </label>
+        </div>    
+      <loading></loading>
   </ion-content>
 </ion-view>

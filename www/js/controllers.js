@@ -86,12 +86,12 @@ $scope.saveChange = function(){
 })
 
 .controller('LoginCtrl' , function($scope, $http, $rootScope, $state) {    
-   $scope.$on('event:auth-loginRequired', function(e, state) {
-       $scope.Login(state);
+   $scope.$on('event:auth-loginRequired', function(e) {
+       $state.go('signin');       
   });
-    
-   $scope.loginData = {};
-   $scope.Login = function(goToState) {       
+    $scope.loginData = {};
+   $scope.Login = function() { 
+        $scope.loading = true;
         var username = $scope.loginData.username;
         var pwd = $scope.loginData.password;
         var urlLogin =  encodeURI('https://insideview.allianceglobalservices.com/MobileApp/loginPage?userName='+username + '&password='+ pwd);
@@ -100,10 +100,15 @@ $scope.saveChange = function(){
         if(data !='Failed'){
             $rootScope.alfTicket = data;
             $rootScope.userName = username;
-            $state.go(goToState);
+            $scope.loading = false;
+            if($rootScope.goBackToState === undefined) {
+                $rootScope.goBackToState = 'app.dashboard';
+            }
+            $state.go($rootScope.goBackToState);
         } else
         {      
             $scope.message = "Invalid username or password";
+            $scope.loading = false;
         }
        
       }).
@@ -211,19 +216,11 @@ $ionicModal.fromTemplateUrl('templates/modal.html', {
      
  })
 
-.controller('DashboardCtrl', function($scope){
-    
-    /*var data1 =    [{"Firefox": 26.8}, {"IE": 45.0},
-                        {
-                            name: 'Chrome',
-                            y: 12.8,
-                            sliced: true,
-                            selected: true
-                        },
-                        {"Safari": 8.5}, {"Opera": 0.7},{"Others": 6.2}
-                    ];*/
-
-    
+.controller('DashboardCtrl', function($scope, $state){
+    $scope.loading = true;
+    $scope.gotoProjMetrics = function(){
+        $state.go('app.projMetrics');
+    }
     $scope.selectedProjectCard = function(name){
             var data1 = [['Firefox', 26.8], ['IE', 45.0],['Safari',  8.5],['Opera',  6.2], ['Others',   0.7]];
             var data2 = [['Chrome', 45.0], ['IE', 26.0] ,['Safari',  8.5],['Opera',  6.2], ['Others',   0.7]];
@@ -256,7 +253,7 @@ $ionicModal.fromTemplateUrl('templates/modal.html', {
 
       $scope.dashBoardChart = {
         size: {
-            width: '800',
+           // width: '800',
             height: '250'
         },
         
@@ -294,6 +291,7 @@ $ionicModal.fromTemplateUrl('templates/modal.html', {
                 loading: false,            
                 useHighStocks: false
     }
+    $scope.loading = false;  
 })
 
 .controller('PopoverCtrl', function($scope, $ionicPopover) {

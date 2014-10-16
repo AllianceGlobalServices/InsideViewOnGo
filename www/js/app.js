@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'highcharts-ng', 'ngAnimate','ui.router', 'dbcontroller','dbService', 'emailConfig', 'signinService'])
+angular.module('starter', ['ionic', 'starter.controllers', 'highcharts-ng', 'ngAnimate','ui.router', 'dbcontroller','dbService', 'emailConfig', 'signinService', 'loading'])
 
 .run(function($ionicPlatform, DB, USER_PREF, $state, $window, SIGNIN) {
   $ionicPlatform.ready(function() {

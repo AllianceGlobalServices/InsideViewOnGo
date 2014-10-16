@@ -1,7 +1,6 @@
 {
   "name": "rapid",
   "app_id": "",
-  "sass": true,
   "gulpStartupTasks": [
     "sass",
     "watch"
