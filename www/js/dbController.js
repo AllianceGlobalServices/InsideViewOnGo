@@ -20,6 +20,7 @@ angular.module('dbcontroller', ['dbService'])
   ];
     
   $scope.getSites = function () {
+        $scope.loading = true;
         $scope.prefRecords = [];
         $scope.prefRecord = null;
       //http://localhost:8080
@@ -28,10 +29,14 @@ angular.module('dbcontroller', ['dbService'])
       success(function(data, status, headers, config) {       
         $scope.sitesList = data;
         $scope.getProjectSelected();
+        $scope.loading = false;
       }).
       error(function(data, status, headers, config) {
+        $rootScope.goBackToState = 'app.settings'; 
+        $scope.loading = false;
        $rootScope.$broadcast('event:auth-loginRequired', 'app.settings');      
-      });    
+      }); 
+      
      }    
 
  $scope.getProjectSelected = function() {

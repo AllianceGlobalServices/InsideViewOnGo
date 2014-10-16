@@ -1,15 +1,14 @@
-<ion-popover-view>
+<ion-popover-view class="agsHeaderBorder" style="overflow-y: scroll; height: {{(50 * metricTypes.length) + 'px'}};">
 <!--    <ion-header-bar class="agsBar">
         
     </ion-header-bar>-->
     <ion-content>
-      <div class="card agsBar">          
+      <div class="inset list">          
         <ion-radio class="checkbox-energized" ng-repeat="item in metricTypes"
                       ng-model="project" 
                       ng-value="item.title">
           {{ item.title }}
         </ion-radio>
-                
       </div>
     </ion-content>
   </ion-popover-view>
