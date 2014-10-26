@@ -7,7 +7,7 @@
               
       </ion-header-bar>
       <ion-content header-shrink scroll-event-interval="5">
-        <div style="height: 64px;"></div>
+        <!--<div style="height: 64px;"></div>-->
 
           <div class="list card">
 
@@ -17,14 +17,7 @@
             <p>Code Violation Chart</p>
           </div>
 
-          <div class="item item-body">
-            <highchart id="chart1" config="chartConfig" class="span9" ></highchart>
-            <p>
-              This is code violations chart for the IDEXX Digital project..
-            </p>
-          </div>
-
-          <div class="item tabs tabs-secondary tabs-icon-left">
+        <div class="item tabs tabs-secondary tabs-icon-left">
             <a class="tab-item" href="#" ng-controller="EmailController" ng-click="sendFeedback();">
               <i class="icon ion-email"></i>
               e-mail
@@ -37,7 +30,15 @@
               <i class="icon ion-share"></i>
               Share
             </a>
+          </div>      
+          <div class="item item-body">
+            <highchart id="chart1" config="chartConfig" class="span9" ></highchart>
+            <p>
+              This is code violations chart for the IDEXX Digital project..
+            </p>
           </div>
+
+          
 
         </div>
           

@@ -28,8 +28,9 @@ angular.module('dbcontroller', ['dbService'])
         $http({method: 'GET', url: urlSites}).
       success(function(data, status, headers, config) {       
         $scope.sitesList = data;
-        $scope.getProjectSelected();
         $scope.loading = false;
+        $scope.getProjectSelected();
+        
       }).
       error(function(data, status, headers, config) {
         $rootScope.goBackToState = 'app.settings'; 
