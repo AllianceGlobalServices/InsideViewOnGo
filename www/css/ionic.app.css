@@ -7945,8 +7945,61 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', end
   border-bottom-color: #ec5645 !important;
   border-bottom-width: 2px !important; }
 
+.ags_Ionic_Icon {
+  font-size: 25px; }
+
 .agsLoading.ion-loading-c {
   font-size: 30px; }
+
+.loading-content {
+  padding: 15px;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #fff;
+  /*border-radius: 4px;
+    height: 50%;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;*/ }
+
+.loading-content-outer {
+  background-color: #4D4D4D;
+  border: 1px solid #232220;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #232220;
+  bottom: 0;
+  height: 70px;
+  left: 0;
+  margin: auto;
+  min-width: 240px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 25%; }
+
+.blur {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px); }
+
+.loading {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 9999; }
+
+.loading-text {
+  padding: 10px;
+  color: #fff; }
 
 /**
  * Platform

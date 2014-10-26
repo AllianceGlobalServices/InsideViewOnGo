@@ -1,7 +1,7 @@
 <ion-pane ng-controller="DashboardCtrl">     
           <ion-header-bar  align-title="left" class="agsBar agsHeaderBorder">
               <div class="buttons">
-                <div class="ion-arrow-left-a" menu-toggle="left" ></div>
+                <div class="ion-arrow-left-a ags_Ionic_Icon" menu-toggle="left" ></div>
               </div>
               <h1 class="title">Dashboard</h1>
               <div class="buttons">
@@ -28,7 +28,7 @@
                           ng-model = "project"
                           ng-value = "column.name">
                          <div class="card colorBand"  ng-class="{cardPopup: column.name == selected}"  ng-click="selectedProjectCard(column.name);">{{column.name}}
-                             <div ng-show ="column.name == selected" class="ion-ios7-arrow-forward" style="float:right;" ng-click="gotoProjMetrics();"></div>
+                             <div ng-show ="column.name == selected" class="ion-ios7-arrow-forward  ags_Ionic_Icon" style="float:right;" ng-click="gotoProjMetrics();"></div>
                           </div>
                       </div> 
                   </ion-scroll> 

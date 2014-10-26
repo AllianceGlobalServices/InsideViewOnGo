@@ -102,7 +102,7 @@ $scope.saveChange = function(){
             $rootScope.userName = username;
             $scope.loading = false;
             if($rootScope.goBackToState === undefined) {
-                $rootScope.goBackToState = 'app.dashboard';
+                $rootScope.goBackToState = 'app.dashboard_main';
             }
             $state.go($rootScope.goBackToState);
         } else
@@ -148,7 +148,9 @@ $ionicModal.fromTemplateUrl('templates/modal.html', {
   
 })
 
-.controller('EnggCtrl', function($scope, $stateParams) {
+.controller('EnggCtrl', function($scope, $stateParams) {  
+    
+    
    var data = [
       { name: "first", data: [10] },
       { name: "second", data: [3] },
@@ -175,7 +177,7 @@ $ionicModal.fromTemplateUrl('templates/modal.html', {
              useHighStocks: false    
   };
     
-  
+  //console.log($scope.myChart);
 })
 
 .controller('SitesCtrl', function($scope, $rootScope, $http) {
@@ -293,6 +295,14 @@ $ionicModal.fromTemplateUrl('templates/modal.html', {
     }
     $scope.loading = false;  
 })
+
+
+.controller('MainDashboardCtrl', ['$scope', '$window', function($scope, $window){
+    var viewPort_height = $window.innerHeight;
+    $scope.maxHeight = viewPort_height - 44;
+    $scope.noOfItems = "4";
+
+}])
 
 .controller('PopoverCtrl', function($scope, $ionicPopover) {
     $scope.metricTypes = [{"id":"1453","title":"Compliance"},

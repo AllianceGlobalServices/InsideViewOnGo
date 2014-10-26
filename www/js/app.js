@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'highcharts-ng', 'ngAnimate','ui.router', 'dbcontroller','dbService', 'emailConfig', 'signinService', 'loading'])
+angular.module('starter', ['ionic', 'starter.controllers', 'highcharts-ng', 'ngAnimate','ui.router', 'dbcontroller','dbService', 'emailConfig', 'signinService', 'loading', 'signoutModule'])
 
 .run(function($ionicPlatform, DB, USER_PREF, $state, $window, SIGNIN) {
   $ionicPlatform.ready(function() {
@@ -55,8 +55,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'highcharts-ng', 'ngA
       url: "/logout",
       views: {
         'menuContent' :{
-          templateUrl: "templates/logout.html",
-          controller: 'LogoutCtrl'
+          templateUrl: "templates/logout.html"
         }
       }
     })
@@ -104,12 +103,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'highcharts-ng', 'ngA
         }
       }
     })
-    .state('app.dashboard', {
-      url: "/dashboard",
+    .state('app.dashboard_main', {
+      url: "/dashboard_main",
       views: {
         'menuContent' :{
-          templateUrl: "templates/dashboard.html"
-          
+          templateUrl: "templates/dashboard_main.html"
+
         }
       }
     })

@@ -2,6 +2,13 @@
     "jscodehints.detectedExclusions": [
         "E:/mobileapp/rapid/www/js/app.js",
         "E:/mobileapp/rapid/www/js/loginService.js",
-        "E:/mobileapp/rapid/www/js/controllers.js"
+        "E:/mobileapp/rapid/www/js/controllers.js",
+        "E:/mobileapp/rapid/platforms/android/assets/www/lib/ionic/js/ionic.min.js",
+        "E:/mobileapp/rapid/www/js/eMailController.js",
+        "E:/mobileapp/rapid/www/js/loading-directive.js",
+        "E:/mobileapp/rapid/www/lib/ionic/js/angular-ui/angular-ui-router.min.js",
+        "E:/mobileapp/rapid/www/lib/ionic/js/ionic-angular.js",
+        "E:/mobileapp/rapid/www/lib/ionic/js/ionic-angular.min.js",
+        "E:/mobileapp/rapid/www/js/logoutController.js"
     ]
 }
